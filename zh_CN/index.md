@@ -1,4 +1,4 @@
-# It works! ;-)
+# A place to record what I learned 
 
 
 ## Section 1
