@@ -124,9 +124,15 @@ Hint: 此外，多光标编辑视频中用 iedit，其实 [multiple-cursor](http
 我是参照[这篇文章](http://onthecode.com/post/2014/03/06/emacs-on-steroids-for-python-elpy-el.html) 配的。基本上 elpy，rope 和 jedi 能把所有事都干了。
 以前我把 Emacs 下的 IPython 也配了，但感觉效果并不理想，也确实没啥必要。
 
-## 0x05 我的快捷键 cheatsheet
+## 0x05 常用 mode 快捷键及其他
 我以上的配置都在 [github](https://github.com/Wilbeibi/Emacs_Cpp_Python_IDE) 上。
 TODO...
+### ibuffer 
+ibuffer是增强版的`C-x C-b`，
+### Dired
+### cua-mode
+### Projectile
+### Yasnippet
 ## References
 1. [Mastering Emacs By Mickey Petersen](https://www.masteringemacs.org/)
 2. [Purcell's emacs.d](https://github.com/purcell/emacs.d)
