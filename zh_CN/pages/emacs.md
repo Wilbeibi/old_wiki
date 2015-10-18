@@ -127,7 +127,7 @@ Hint: 此外，多光标编辑视频中用 iedit，其实 [multiple-cursor](http
 ## 0x05 常用 mode 快捷键及其他
 我以上的配置都在 [github](https://github.com/Wilbeibi/Emacs_Cpp_Python_IDE) 上。
 TODO...
-### ibuffer 
+### ibuffer
 ibuffer是增强版的`C-x C-b`，
 ### Dired
 ### cua-mode

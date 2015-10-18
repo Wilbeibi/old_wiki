@@ -20,8 +20,8 @@
   -- collections.md
   -->
 [Emacs](pages/emacs.md)
-[Notes](pages/notes.md)
-[About](pages/about.md)
+[Reading](pages/notes.md)
+[Linux](pages/linux.md)
 [Download](pages/download.md)
 
 <!-- A more complex navigation example: ----------------------------------------
