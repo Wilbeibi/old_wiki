@@ -11,7 +11,10 @@ It's so personal so I will tend to be subjective and use both English and Chines
 and persistence. It's simple, elegant and newbie friendly. My notes are
 emphasized on concurrency part. [notes are here][tep]
 
-
+## Pro Git
++ Only covered the book's first three charpters. I wrote the note in 2012, and mostly
+are copy/paste from the book. [notes are here][progit]  
 
 
 [tep]: ./readings/os_three_easy_pieces.md
+[progit]: ./readings/pro_git.md
