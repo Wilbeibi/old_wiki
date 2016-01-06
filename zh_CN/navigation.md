@@ -22,7 +22,7 @@
 [Emacs](pages/emacs.md)
 [Reading](pages/notes.md)
 [Linux](pages/linux.md)
-[Download](pages/download.md)
+[Miscellaneous](pages/mise.md)
 
 <!-- A more complex navigation example: ----------------------------------------
 
