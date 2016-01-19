@@ -12,6 +12,7 @@
 + tcpdump capture all traffic. use `-s` to set snarf
 + filter "Permission denied" or "No such file or directory" in find result `find / -type f -user bandit7 -group bandit6 -size 33c 2>&1 | grep -v "denied\|No"`
 + `$_`: last argument of the previous command [ST: How can I recall arguments of previous command][recall]
++ `du -sh *` show size of each directory
 ## Miscellaneous
 ### Mount and /etc/fstab
 + They are two ways to mount a disk, the obvious difference is that if we restart
