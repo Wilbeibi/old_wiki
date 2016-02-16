@@ -13,6 +13,7 @@
 + filter "Permission denied" or "No such file or directory" in find result `find / -type f -user bandit7 -group bandit6 -size 33c 2>&1 | grep -v "denied\|No"`
 + `$_`: last argument of the previous command [ST: How can I recall arguments of previous command][recall]
 + `du -sh *` show size of each directory
++ extract content between quotes: `grep -o '".*"' somefile | sed 's/"//g'` [st][extract_quote]
 ## Miscellaneous
 ### Mount and /etc/fstab
 + They are two ways to mount a disk, the obvious difference is that if we restart
@@ -21,6 +22,8 @@ will mount it for us.
 + detailed info about each parameter are [here][mount]
 ### Check whether a executable file with gcc's -g flag
 + `file exec_name` if is not stripped, means it contains -g info. [More][strip]
+### Makefile
++ only tab, no 4 spaces, no trailing spaces too.
 
 ## References
 1. [List of Linux guide][guide]
@@ -37,3 +40,4 @@ will mount it for us.
 [findcd]: http://stackoverflow.com/questions/3458461/find-file-then-cd-to-that-directory-in-linux
 [strip]: http://unix.stackexchange.com/questions/2969/what-are-stripped-and-not-stripped-executables-in-unix
 [recall]: http://stackoverflow.com/questions/3371294/how-can-i-recall-the-argument-of-the-previous-bash-command
+[extract_quote]: http://unix.stackexchange.com/questions/137030/how-do-i-extract-the-content-of-quoted-strings-from-the-output-of-a-command
