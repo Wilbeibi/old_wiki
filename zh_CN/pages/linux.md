@@ -14,6 +14,13 @@
 + `$_`: last argument of the previous command [ST: How can I recall arguments of previous command][recall]
 + `du -sh *` show size of each directory
 + extract content between quotes: `grep -o '".*"' somefile | sed 's/"//g'` [st][extract_quote]
++ rename suffix (all cpp files to cc) `for f in *.cpp; do mv "$%"`
++ `Ctrl-\` is QUIT signal
++ Sed use other delimiter other than "/" [Black magic][bm]
++ `:noh` to turn off vim search highlight until new search
++ `tmux source-file ~/.tmux.conf`
+
+
 ## Miscellaneous
 ### Mount and /etc/fstab
 + They are two ways to mount a disk, the obvious difference is that if we restart
@@ -24,6 +31,8 @@ will mount it for us.
 + `file exec_name` if is not stripped, means it contains -g info. [More][strip]
 ### Makefile
 + only tab, no 4 spaces, no trailing spaces too.
+### Bash variables
++ http://stackoverflow.com/questions/5163144/what-are-the-special-dollar-sign-shell-variables
 
 ## References
 1. [List of Linux guide][guide]
@@ -41,3 +50,4 @@ will mount it for us.
 [strip]: http://unix.stackexchange.com/questions/2969/what-are-stripped-and-not-stripped-executables-in-unix
 [recall]: http://stackoverflow.com/questions/3371294/how-can-i-recall-the-argument-of-the-previous-bash-command
 [extract_quote]: http://unix.stackexchange.com/questions/137030/how-do-i-extract-the-content-of-quoted-strings-from-the-output-of-a-command
+[bm]: http://unix.stackexchange.com/questions/39800/how-to-replace-a-string-with-a-string-containing-slash-with-sed
