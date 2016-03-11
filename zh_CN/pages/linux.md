@@ -19,6 +19,8 @@
 + Sed use other delimiter other than "/" [Black magic][bm]
 + `:noh` to turn off vim search highlight until new search
 + `tmux source-file ~/.tmux.conf`
++ `wget download arbitrary files recursively` [wget -r --no-parent --reject
+"*~" http://wtf.com/src][wget]
 
 
 ## Miscellaneous
@@ -51,3 +53,4 @@ will mount it for us.
 [recall]: http://stackoverflow.com/questions/3371294/how-can-i-recall-the-argument-of-the-previous-bash-command
 [extract_quote]: http://unix.stackexchange.com/questions/137030/how-do-i-extract-the-content-of-quoted-strings-from-the-output-of-a-command
 [bm]: http://unix.stackexchange.com/questions/39800/how-to-replace-a-string-with-a-string-containing-slash-with-sed
+[wget]: http://stackoverflow.com/questions/273743/using-wget-to-recursively-fetch-a-directory-with-arbitrary-files-in-it 
