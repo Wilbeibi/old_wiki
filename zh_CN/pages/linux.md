@@ -11,7 +11,7 @@
 + Install Python package to customized directory
 + tcpdump capture all traffic. use `-s` to set snarf
 + filter "Permission denied" or "No such file or directory" in find result `find / -type f -user bandit7 -group bandit6 -size 33c 2>&1 | grep -v "denied\|No"`
-+ `$_`: last argument of the previous command [ST: How can I recall arguments of previous command][recall]
++ `Alt + .`: last argument of the previous command [ST: How can I recall arguments of previous command][recall]
 + `du -sh *` show size of each directory
 + extract content between quotes: `grep -o '".*"' somefile | sed 's/"//g'` [st][extract_quote]
 + rename suffix (all cpp files to cc) `for f in *.cpp; do mv "$%"`
@@ -19,8 +19,17 @@
 + Sed use other delimiter other than "/" [Black magic][bm]
 + `:noh` to turn off vim search highlight until new search
 + `tmux source-file ~/.tmux.conf`
-+ `wget download arbitrary files recursively` [wget -r --no-parent --reject
-"*~" http://wtf.com/src][wget]
++ `wget download arbitrary files recursively`
+  wget -r --no-parent --reject
++ 当文件太多，run out of inode的时候(watch df -i)， 可以 `ls -f | xargs -n 500 -P 20 rm`。 `ls -f` unsorted 列出文件， xargs 以批处理，每次处理500个，并发20个进程删除。
+> Handling files or folders with spaces in the name
+One problem with the above examples is that it does not correctly handle files or directories with a space in the name. This is because xargs by default will split on any white-space character. A quick solution to this is to tell find to delimit results with NUL (\0) characters (by supplying -print0 to find), and to tell xargs to split the input on NUL characters as well (-0).
+
+> Remove backup files recursively even if they contain spaces
+> find . -name "\*~" -print0 | xargs -0 rm
+> Security note: filenames can often contain more than just spaces.
+
+
 
 
 ## Miscellaneous
@@ -35,7 +44,14 @@ will mount it for us.
 + only tab, no 4 spaces, no trailing spaces too.
 ### Bash variables
 + http://stackoverflow.com/questions/5163144/what-are-the-special-dollar-sign-shell-variables
-
++ [create tty](http://unix.stackexchange.com/questions/157313/accidentally-deleted-dev-tty-how-to-bring-it-back-on-debian7)
+```
+mknod /dev/tty c 5 0
+chmod 666 /dev/tty
+chown root.root /dev/tty
+```
+### vim
++ search current word (`*`)
 ## References
 1. [List of Linux guide][guide]
 2. [List of Linux howto][howto]
@@ -53,4 +69,4 @@ will mount it for us.
 [recall]: http://stackoverflow.com/questions/3371294/how-can-i-recall-the-argument-of-the-previous-bash-command
 [extract_quote]: http://unix.stackexchange.com/questions/137030/how-do-i-extract-the-content-of-quoted-strings-from-the-output-of-a-command
 [bm]: http://unix.stackexchange.com/questions/39800/how-to-replace-a-string-with-a-string-containing-slash-with-sed
-[wget]: http://stackoverflow.com/questions/273743/using-wget-to-recursively-fetch-a-directory-with-arbitrary-files-in-it 
+[wget]: http://stackoverflow.com/questions/273743/using-wget-to-recursively-fetch-a-directory-with-arbitrary-files-in-it
