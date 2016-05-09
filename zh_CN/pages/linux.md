@@ -25,10 +25,10 @@
 > Handling files or folders with spaces in the name
 One problem with the above examples is that it does not correctly handle files or directories with a space in the name. This is because xargs by default will split on any white-space character. A quick solution to this is to tell find to delimit results with NUL (\0) characters (by supplying -print0 to find), and to tell xargs to split the input on NUL characters as well (-0).
 
-+ Remove backup files recursively even if they contain spaces
-+ find . -name "\*~" -print0 | xargs -0 rm
-+ Security note: filenames can often contain more than just spaces.
 
++ Remove backup files recursively even if they contain spaces    
++ find . -name "\*~" -print0 | xargs -0 rm  
++ Security note: filenames can often contain more than just spaces.  
 + `less` injection, when we can access `less` command, we can use `v` and `!` to gain access to edit and shell. Add environment variables
   `export LESSSECURE=1`, we can turn off these features, only show output.
 
