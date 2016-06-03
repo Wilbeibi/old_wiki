@@ -33,7 +33,7 @@ One problem with the above examples is that it does not correctly handle files o
   `export LESSSECURE=1`, we can turn off these features, only show output.
 
 + [Makefile Automatic variables](http://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html#Automatic-Variables), use `make -p` to print all related variables
-
++ `hostname -I` show IP address
 ## Miscellaneous
 ### Mount and /etc/fstab
 + They are two ways to mount a disk, the obvious difference is that if we restart
