@@ -133,6 +133,9 @@ ibuffer是增强版的`C-x C-b`，
 ### cua-mode
 ### Projectile
 ### Yasnippet
+
+## emacs cli 版配置
+
 ## References
 1. [Mastering Emacs By Mickey Petersen](https://www.masteringemacs.org/)
 2. [Purcell's emacs.d](https://github.com/purcell/emacs.d)
