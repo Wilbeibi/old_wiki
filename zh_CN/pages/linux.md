@@ -52,6 +52,10 @@ mknod /dev/tty c 5 0
 chmod 666 /dev/tty
 chown root.root /dev/tty
 ```
+
++ All directories named by -isystem are searched after all directories named by -I, no matter what their order was on the command line. If the same directory is named by both -I and -isystem, the -I option is ignored
++ Remove line contain pattern: to stdout `sed '/pattern to match/d' ./infile`; modify file `sed -i.bak '/pattern to match/d' ./infile`
+
 ### vim
 + search current word (`*`)
 ## References
