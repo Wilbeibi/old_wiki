@@ -34,6 +34,10 @@ One problem with the above examples is that it does not correctly handle files o
 
 + [Makefile Automatic variables](http://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html#Automatic-Variables), use `make -p` to print all related variables
 + `hostname -I` show IP address
++ `sed -i '' -e's/[ \t]*$//' "$1"` to remove trailing spaces or tabs
++ `{ xargs cat < list.txt ; } > bigFile.txt`
++ webpy 的 doc 写的好
+
 ## Miscellaneous
 ### Mount and /etc/fstab
 + They are two ways to mount a disk, the obvious difference is that if we restart
@@ -52,12 +56,26 @@ mknod /dev/tty c 5 0
 chmod 666 /dev/tty
 chown root.root /dev/tty
 ```
+### xargs 妙用
++ file_list.txt 存了一堆需要删除的文件名， 用 `xargs rm < file_list.txt` 就行。
++ file_list.txt 存了一堆需要拼接在一起的文件名， 用 `{xargs cat < ./file_list.txt} > bigfile.txt`
+
+### get return code of last command
++ echo $?
 
 + All directories named by -isystem are searched after all directories named by -I, no matter what their order was on the command line. If the same directory is named by both -I and -isystem, the -I option is ignored
 + Remove line contain pattern: to stdout `sed '/pattern to match/d' ./infile`; modify file `sed -i.bak '/pattern to match/d' ./infile`
-
+### [What are .a and .so files?](http://stackoverflow.com/questions/9809213/what-are-a-and-so-files)
+    In short, `a` for archive, linking in compile time. `so` for shared object, linking in runtime
 ### vim
 + search current word (`*`)
+#### Multi-line [editing](http://stackoverflow.com/a/9549765/1035859)
++ Move cursor to specific location
++ Enter visual block mode (`Ctrl + v`)
++ Press `j`  N time to choose N lines
++ Press `I`
++ Type whatever text
++ Press `Esc`
 ## References
 1. [List of Linux guide][guide]
 2. [List of Linux howto][howto]
