@@ -3,7 +3,7 @@
 ## shell
 + [ps problem1][ps1]
 + [directory shortcut][cdpath]
-+ [redirect program output to null][redirect]
++ [redirect program output to null][redirect] command > /dev/null 2>&1
 + archive/extract
 + [find file then cd to that directory in Linux][findcd]
   To include symbol links, add `-L`
