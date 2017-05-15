@@ -1,4 +1,4 @@
-# Wilbeibi's Linux garden
+  # Wilbeibi's Linux garden
 
 ## shell
 + [ps problem1][ps1]
@@ -18,7 +18,7 @@
 + `Ctrl-\` is QUIT signal
 + Sed use other delimiter other than "/" [Black magic][bm]
 + `:noh` to turn off vim search highlight until new search
-+ `tmux source-file ~/.tmux.conf`
++ `tmux source-file ~/.tmux.conf`Just4
 + `wget download arbitrary files recursively`
   wget -r --no-parent --reject
 + 当文件太多，run out of inode的时候(watch df -i)， 可以 `ls -f | xargs -n 500 -P 20 rm`。 `ls -f` unsorted 列出文件， xargs 以批处理，每次处理500个，并发20个进程删除。
