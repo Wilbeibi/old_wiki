@@ -38,7 +38,8 @@ One problem with the above examples is that it does not correctly handle files o
 + `sed -i '' -e's/[ \t]*$//' "$1"` to remove trailing spaces or tabs
 + `{ xargs cat < list.txt ; } > bigFile.txt`
 + webpy 的 doc 写的好
-
++ `find . -name '.DS_Store' -type f -delete`
++ `netstat -pl | grep NAME_OR_PID` : check ports the process is using
 ## Miscellaneous
 ### Mount and /etc/fstab
 + They are two ways to mount a disk, the obvious difference is that if we restart
