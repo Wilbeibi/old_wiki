@@ -78,6 +78,9 @@ chown root.root /dev/tty
 + Press `I`
 + Type whatever text
 + Press `Esc`
+#### Windows carriage
++ Find files with windows carriage: `find . -not -type d -exec file "{}" ";" | grep CRLF`
++ Display CRLF as ^M: `:e ++ff=unix`
 ## References
 1. [List of Linux guide][guide]
 2. [List of Linux howto][howto]
