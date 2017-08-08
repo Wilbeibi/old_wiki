@@ -18,10 +18,10 @@
 + `Ctrl-\` is QUIT signal
 + Sed use other delimiter other than "/" [Black magic][bm]
 + `:noh` to turn off vim search highlight until new search
-+ `tmux source-file ~/.tmux.conf`Just4
++ `tmux source-file ~/.tmux.conf`
 + `wget download arbitrary files recursively`
   wget -r --no-parent --reject
-+ 当文件太多，run out of inode的时候(watch df -i)， 可以 `ls -f | xargs -n 500 -P 20 rm`。 `ls -f` unsorted 列出文件， xargs 以批处理，每次处理500个，并发20个进程删除。
++ 当文件太多，run out of inode的时候(see df -i)， 可以 `ls -f | xargs -n 500 -P 20 rm`。 `ls -f` unsorted 列出文件（unsorted 使得更快)， xargs 以批处理，每次处理500个，并发20个进程删除。
 > Handling files or folders with spaces in the name
 One problem with the above examples is that it does not correctly handle files or directories with a space in the name. This is because xargs by default will split on any white-space character. A quick solution to this is to tell find to delimit results with NUL (\0) characters (by supplying -print0 to find), and to tell xargs to split the input on NUL characters as well (-0).
 
@@ -80,6 +80,7 @@ chown root.root /dev/tty
 + Press `Esc`
 #### Windows carriage
 + Find files with windows carriage: `find . -not -type d -exec file "{}" ";" | grep CRLF`
++ Only check files with given extensions: `find -iregex '.*\.\(hpp\|h\|c\|cc\)$' -exec file "{}" ";" | grep CRLF`
 + Display CRLF as ^M: `:e ++ff=unix`
 ## References
 1. [List of Linux guide][guide]
