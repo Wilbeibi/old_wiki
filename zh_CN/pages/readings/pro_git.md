@@ -1,4 +1,3 @@
-
 # Pro Git Notes
 This is a brief notes about some points of *Pro Git*. It only contains first 3
 chapters (contains most commonly used commonds of Git). I will maintain this
