@@ -13,6 +13,7 @@
 + filter "Permission denied" or "No such file or directory" in find result `find / -type f -user bandit7 -group bandit6 -size 33c 2>&1 | grep -v "denied\|No"`
 + `Alt + .`: last argument of the previous command [ST: How can I recall arguments of previous command][recall]
 + `du -sh *` show size of each directory
++ `ls -la | sort -rnk 5`, sort files in directory, size in descending order
 + extract content between quotes: `grep -o '".*"' somefile | sed 's/"//g'` [st][extract_quote]
 + rename suffix (all cpp files to cc) `for f in *.cpp; do mv "$%"`
 + `Ctrl-\` is QUIT signal
