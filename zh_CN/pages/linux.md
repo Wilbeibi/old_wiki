@@ -32,7 +32,7 @@ One problem with the above examples is that it does not correctly handle files o
 + Security note: filenames can often contain more than just spaces.  
 + `less` injection, when we can access `less` command, we can use `v` and `!` to gain access to edit and shell. Add environment variables
   `export LESSSECURE=1`, we can turn off these features, only show output.
-
++ `true` command: for test purpose, will always return successfully
 + [Makefile Automatic variables](http://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html#Automatic-Variables), use `make -p` to print all related variables
 + `make -n install` dry run for how builded files copy to system, then can manually delete those from system
 + `hostname -I` show IP address
