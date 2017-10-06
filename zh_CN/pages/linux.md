@@ -28,7 +28,7 @@ One problem with the above examples is that it does not correctly handle files o
 
 + `cp -a` Preserves structure and attributes of files but not directory structure
 + Remove backup files recursively even if they contain spaces    
-+ find . -name "\*~" -print0 | xargs -0 rm  
++ find . -name "\*~" -print0 | xargs -0 rm 或者 `find . -name ".DS_Store" -type f -delete`
 + Security note: filenames can often contain more than just spaces.  
 + `less` injection, when we can access `less` command, we can use `v` and `!` to gain access to edit and shell. Add environment variables
   `export LESSSECURE=1`, we can turn off these features, only show output.
